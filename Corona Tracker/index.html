@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+    <html lang="en">    
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X -UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+            <title>Covid Tracker</title>
+            <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+            <link rel="stylesheet" href="./css/grid.css">
+            <link rel="stylesheet" href="./css/app.css">
+        </head>
+
+        <body class="loading">
+            <div class="nav-wrappaer">
+                <div class="container">
+                    <div class="nav">
+                        <a href="" class="logo">
+                            C<i class="bx bxs-virus-block bx-tada"></i>VID TRACKER
+                        </a>
+                        <div class="darkmode-switch" id="darkmode-switcher">
+                            <span>
+                                <i class="bx bxs-moon"></i>
+                                <i class="bx bxs-sun"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 col-md-6 col-sm-12">
+                            <div class="box">
+                                <div class="country-select" id="country-select">
+                                    <div class="country-select-toggle" id="country-select-toggle">
+                                        <span>
+                                            Global
+                                        </span>
+                                        <i class="bx bx-chevron-down"></i>
+                                    </div>
+                                    <div class="country-select-list" id="country-select-list">
+                                        <input type="text" placeholder="Masukkan Nama Negara">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8 col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-4 col-md-4 col-sm-12">
+                                    <div class="box box-hover">
+                                        <div class="count count-confirmed">
+                                            <div class="count-icon">
+                                                <i class="bx bxs-virus"></i>
+                                            </div>
+                                            <div class="count-info">
+                                                <h5 id="confirmed-total">123,456,789</h5>
+                                                <span>Terkonfirmasi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-4 col-sm-12">
+                                    <div class="box box-hover">
+                                        <div class="count count-recovered">
+                                            <div class="count-icon">
+                                                <i class="bx bxs-smile"></i>
+                                            </div>
+                                            <div class="count-info">
+                                                <h5 id="recovered-total">123,456,789</h5>
+                                                <span>Sembuh</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-4 col-sm-12">
+                                    <div class="box box-hover">
+                                        <div class="count count-death">
+                                            <div class="count-icon">
+                                                <i class="bx bxs-sad"></i>
+                                            </div>
+                                            <div class="count-info">
+                                                <h5 id="death-total">123,456,789</h5>
+                                                <span>Meninggal</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            Semua Waktu
+                                        </div>
+                                        <div class="box-header">
+                                            <div id="all-time-chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-sm-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            Apa itu Covid - 19 ?
+                                        </div>
+                                        <div class="box-body">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/i0ZabxXmH4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 col-sm-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            Bagaimana Cara Menghadapi Covid - 19 ?
+                                        </div>
+                                        <div class="box-body">
+                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/6XdjmB4IY3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    30 Hari Terakhir
+                                </div>
+                                <div class="box-body">
+                                    <div id="days-chart">
+
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-header">
+                                        Rating Sembuh
+                                    </div>
+                                    <div class="box-body">
+                                        <div id="recovery-rate-chart"></div>
+                                    </div>  
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-header">
+                                        Negara Terbanyak Terinfeksi
+                                    </div>
+                                    <div class="box-body">
+                                        <table class="table-countries" id="table-countries">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Negara
+                                                    </th>
+                                                    <th>Terkonfirmasi</th>
+                                                    <th>Sembuh</th>
+                                                    <th>Meninggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Test</td>
+                                                    <td>Test</td>
+                                                    <td>Test</td>
+                                                    <td>Test</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                Source From <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f4b683" target="_blank">api.covid19api.com</a>
+                <br>
+                Designed by <a href="https://www.instagram.com/its.dunnx/" target="_blank"> Ali Abdurrahman </a>
+            </div>
+
+            <div class="loader">
+                <i class="bx bxs-virus bx-spin"></i>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+            <script src="./js/fetchApi.js"></script>
+            <script src="./js/covidApi.js"></script>
+            <script src="./js/app.js"></script>
+        </body>
+    </html>
